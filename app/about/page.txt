@@ -1,0 +1,492 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title: "About | BizFlow Technologies",
+  description:
+    "Learn about BizFlow Technologies, our mission, development approach and commitment to building practical websites, software, SaaS products and business automation solutions.",
+};
+
+const values = [
+  {
+    number: "01",
+    title: "Solve Real Problems",
+    description:
+      "We focus on technology that addresses practical business challenges rather than building features without purpose.",
+  },
+  {
+    number: "02",
+    title: "Keep It Practical",
+    description:
+      "Our solutions are designed to be understandable, useful and easy for businesses and their customers to adopt.",
+  },
+  {
+    number: "03",
+    title: "Build for Growth",
+    description:
+      "We structure digital products so they can evolve as requirements, customers and operations expand.",
+  },
+  {
+    number: "04",
+    title: "Continuous Improvement",
+    description:
+      "Launch is not necessarily the end. We support improvements, customization and future development.",
+  },
+];
+
+const capabilities = [
+  "Professional Websites",
+  "Custom Business Software",
+  "Web Applications",
+  "SaaS Platforms",
+  "Business Automation",
+  "Software Customization",
+  "System Maintenance",
+  "Technology Consulting",
+];
+
+const process = [
+  {
+    number: "01",
+    title: "Understand",
+    description:
+      "We begin by understanding the business, the users and the problem that needs to be solved.",
+  },
+  {
+    number: "02",
+    title: "Plan",
+    description:
+      "We define the solution, priorities, features and development direction before implementation.",
+  },
+  {
+    number: "03",
+    title: "Build",
+    description:
+      "We design and develop the solution while continuously testing and refining the experience.",
+  },
+  {
+    number: "04",
+    title: "Launch",
+    description:
+      "The finished product is prepared, deployed and made available for real users.",
+  },
+  {
+    number: "05",
+    title: "Improve",
+    description:
+      "We can continue supporting the product as business needs and opportunities evolve.",
+  },
+];
+
+export default function AboutPage() {
+  return (
+    <main>
+      {/* HEADER */}
+      <header className="site-header">
+        <div className="container nav-wrapper">
+          <Link href="/" className="brand">
+            <span className="brand-mark">B</span>
+
+            <span className="brand-text">
+              <strong>BizFlow</strong>
+              <small>Digital Solutions</small>
+            </span>
+          </Link>
+
+          <nav className="desktop-nav" aria-label="Main navigation">
+            <Link href="/">Home</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/#solutions">Solutions</Link>
+            <Link href="/products">Products</Link>
+            <Link href="/about">About</Link>
+            <Link href="/#contact">Contact</Link>
+          </nav>
+
+          <Link href="/#contact" className="nav-cta">
+            Start a Project
+          </Link>
+
+          <details className="mobile-menu">
+            <summary aria-label="Open navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+            </summary>
+
+            <nav>
+              <Link href="/">Home</Link>
+              <Link href="/services">Services</Link>
+              <Link href="/#solutions">Solutions</Link>
+              <Link href="/products">Products</Link>
+              <Link href="/about">About</Link>
+              <Link href="/#contact">Contact</Link>
+            </nav>
+          </details>
+        </div>
+      </header>
+
+      {/* HERO */}
+      <section className="inner-hero about-page-hero">
+        <div className="container inner-hero-content">
+          <span className="section-label light-label">
+            About BizFlow
+          </span>
+
+          <h1>
+            We build technology around
+            <span> real business needs.</span>
+          </h1>
+
+          <p>
+            BizFlow Technologies is a digital solutions business focused on
+            building professional websites, custom software, web applications,
+            SaaS products and business automation systems that help businesses
+            operate more effectively.
+          </p>
+
+          <div className="hero-actions">
+            <Link href="/services" className="btn btn-primary">
+              Explore Our Services
+              <span>→</span>
+            </Link>
+
+            <Link
+              href="/products"
+              className="btn inner-secondary-btn"
+            >
+              View Our Products
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* WHO WE ARE */}
+      <section className="section about-story-section">
+        <div className="container about-story-grid">
+          <div>
+            <span className="section-label">
+              Who We Are
+            </span>
+
+            <h2>
+              Technology should help businesses work smarter.
+            </h2>
+          </div>
+
+          <div className="about-story-copy">
+            <p>
+              BizFlow was built around a simple idea: software should solve
+              problems, improve processes and create opportunities.
+            </p>
+
+            <p>
+              We work with businesses that need professional digital
+              solutions—whether that means launching a website, replacing
+              manual processes, developing custom internal systems or creating
+              a software product that can be sold to customers.
+            </p>
+
+            <p>
+              Alongside client projects, BizFlow also develops its own
+              software products and SaaS applications, creating a growing
+              portfolio of practical digital tools.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* MISSION */}
+      <section className="about-mission-section">
+        <div className="container about-mission-grid">
+          <div className="about-mission-card">
+            <span>Our Mission</span>
+
+            <h2>
+              Make useful technology more accessible to businesses.
+            </h2>
+
+            <p>
+              Our mission is to help businesses adopt practical digital
+              systems that improve efficiency, customer experience and
+              long-term growth.
+            </p>
+          </div>
+
+          <div className="about-mission-card">
+            <span>Our Vision</span>
+
+            <h2>
+              Build digital products that create lasting business value.
+            </h2>
+
+            <p>
+              We aim to build a strong portfolio of software products and
+              custom solutions that can serve businesses locally and
+              internationally.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* CAPABILITIES */}
+      <section className="section">
+        <div className="container">
+          <div className="section-heading">
+            <div>
+              <span className="section-label">
+                What We Build
+              </span>
+
+              <h2>
+                A growing digital solutions company.
+              </h2>
+            </div>
+
+            <p>
+              BizFlow combines website development, software engineering and
+              business process thinking to create practical solutions.
+            </p>
+          </div>
+
+          <div className="about-capabilities-grid">
+            {capabilities.map((item, index) => (
+              <div key={item}>
+                <span>
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+
+                <strong>{item}</strong>
+
+                <i>↗</i>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* VALUES */}
+      <section className="about-values-section">
+        <div className="container">
+          <div className="about-values-heading">
+            <span className="section-label light-label">
+              Our Principles
+            </span>
+
+            <h2>
+              How we think about building digital solutions.
+            </h2>
+          </div>
+
+          <div className="about-values-grid">
+            {values.map((value) => (
+              <article key={value.number}>
+                <span>{value.number}</span>
+
+                <h3>{value.title}</h3>
+
+                <p>{value.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PROCESS */}
+      <section className="section about-process-section">
+        <div className="container">
+          <div className="services-page-heading">
+            <span className="section-label">
+              Our Development Approach
+            </span>
+
+            <h2>
+              Clear thinking before complicated technology.
+            </h2>
+
+            <p>
+              We first understand the challenge and desired outcome, then
+              choose the appropriate technology and development approach.
+            </p>
+          </div>
+
+          <div className="about-process-list">
+            {process.map((step) => (
+              <div key={step.number}>
+                <span>{step.number}</span>
+
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* LOCAL + INTERNATIONAL */}
+      <section className="solutions-section">
+        <div className="container solutions-grid">
+          <div className="solutions-content">
+            <span className="section-label light-label">
+              Built From Nigeria
+            </span>
+
+            <h2>
+              Local understanding.
+              <span> Global digital standards.</span>
+            </h2>
+
+            <p>
+              BizFlow Technologies is positioned to serve businesses in
+              Nigeria while building websites, software and SaaS solutions
+              suitable for customers and users anywhere.
+            </p>
+
+            <Link href="/#contact" className="btn btn-light">
+              Work With BizFlow
+              <span>→</span>
+            </Link>
+          </div>
+
+          <div className="about-global-panel">
+            <div>
+              <span>01</span>
+
+              <strong>Business Focus</strong>
+
+              <p>
+                Solutions are designed around actual operational and
+                commercial requirements.
+              </p>
+            </div>
+
+            <div>
+              <span>02</span>
+
+              <strong>Modern Technology</strong>
+
+              <p>
+                We use modern development tools and cloud-based platforms to
+                build scalable digital systems.
+              </p>
+            </div>
+
+            <div>
+              <span>03</span>
+
+              <strong>Flexible Development</strong>
+
+              <p>
+                Projects can start simple and expand gradually as business
+                requirements evolve.
+              </p>
+            </div>
+
+            <div>
+              <span>04</span>
+
+              <strong>Product Mindset</strong>
+
+              <p>
+                We build with usability, maintainability and long-term product
+                growth in mind.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="cta-section services-cta">
+        <div className="container">
+          <div className="cta-card">
+            <div>
+              <span className="section-label light-label">
+                Build With BizFlow
+              </span>
+
+              <h2>
+                Have a business problem or digital idea?
+              </h2>
+
+              <p>
+                Tell us what you want to improve, automate or build and
+                let&apos;s explore the right solution.
+              </p>
+            </div>
+
+            <Link href="/#contact" className="btn btn-white">
+              Start a Conversation
+              <span>→</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="footer">
+        <div className="container footer-main">
+          <div className="footer-brand">
+            <Link href="/" className="brand footer-logo">
+              <span className="brand-mark">B</span>
+
+              <span className="brand-text">
+                <strong>BizFlow</strong>
+                <small>Digital Solutions</small>
+              </span>
+            </Link>
+
+            <p>
+              Building websites, software and digital products that solve real
+              business problems.
+            </p>
+          </div>
+
+          <div className="footer-column">
+            <strong>Company</strong>
+            <Link href="/about">About</Link>
+            <Link href="/services">Services</Link>
+            <Link href="/products">Products</Link>
+            <Link href="/#contact">Contact</Link>
+          </div>
+
+          <div className="footer-column">
+            <strong>Services</strong>
+            <Link href="/services">Web Development</Link>
+            <Link href="/services">Software Development</Link>
+            <Link href="/services">SaaS Development</Link>
+            <Link href="/services">Business Automation</Link>
+          </div>
+
+          <div className="footer-column">
+            <strong>Connect</strong>
+
+            <a href="mailto:hello@yourbusiness.com">
+              Email
+            </a>
+
+            <a
+              href="https://wa.me/2348058427904"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div className="container footer-bottom">
+          <p>
+            © {new Date().getFullYear()} BizFlow Technologies. All rights
+            reserved.
+          </p>
+
+          <p>
+            Digital Solutions. Smarter Business.
+          </p>
+        </div>
+      </footer>
+    </main>
+  );
+}
