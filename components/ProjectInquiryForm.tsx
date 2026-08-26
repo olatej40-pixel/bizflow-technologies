@@ -6,6 +6,7 @@ import {
 } from "react";
 
 import { siteConfig } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 
 export default function ProjectInquiryForm() {
   const [name, setName] = useState("");
@@ -39,6 +40,13 @@ Please let me know the next steps.
       `${siteConfig.whatsappUrl}?text=${encodeURIComponent(
         text
       )}`;
+
+      trackEvent("generate_lead", {
+  form_name: "homepage_inquiry_form",
+  service,
+  budget:
+    budget || "not_specified",
+});
 
     window.open(
       whatsappUrl,

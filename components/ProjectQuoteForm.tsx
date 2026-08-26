@@ -6,6 +6,7 @@ import {
 } from "react";
 
 import { siteConfig } from "@/lib/site";
+import { trackEvent } from "@/lib/analytics";
 
 export default function ProjectQuoteForm() {
   const [name, setName] = useState("");
@@ -50,6 +51,15 @@ Thank you.
       `${siteConfig.whatsappUrl}?text=${encodeURIComponent(
         text
       )}`;
+
+      trackEvent("generate_lead", {
+  form_name: "project_quote_form",
+  service,
+  budget:
+    budget || "not_specified",
+  preferred_timeline:
+    timeline || "not_specified",
+});
 
     window.open(
       url,

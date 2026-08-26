@@ -4,6 +4,7 @@ import "./globals.css";
 
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { siteConfig } from "@/lib/site";
+import SiteAnalytics from "@/components/SiteAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -106,10 +107,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+  {children}
 
-        <GoogleAnalytics />
-      </body>
+  <GoogleAnalytics />
+  <SiteAnalytics />
+</body>
     </html>
   );
 }
