@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -106,6 +107,8 @@ export default function RootLayout({
     <html lang="en">
       <body>
         {children}
+
+        <GoogleAnalytics />
       </body>
     </html>
   );

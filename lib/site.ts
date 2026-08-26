@@ -20,7 +20,7 @@ export const siteConfig = {
 
   url: siteUrl,
 
-  email: "hello@yourbusiness.com",
+  email: "bizflowsolutions1@gmail.com",
 
   whatsappNumber,
 
