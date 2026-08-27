@@ -7,13 +7,26 @@ import SiteFooter from "@/components/SiteFooter";
 import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "Products | BizFlow Technologies",
+  title: "Products",
 
   description:
-    "Explore software products and digital solutions developed by BizFlow Technologies.",
-};
+    "Explore software products and digital solutions developed by BizFlow Technologies, including commerce, booking and custom business systems.",
 
-const products = [
+  alternates: {
+    canonical: "/products",
+  },
+
+  openGraph: {
+    title:
+      "Products | BizFlow Technologies",
+
+    description:
+      "Explore software products and scalable digital solutions developed by BizFlow Technologies.",
+
+    url:
+      "/products",
+  },
+};const products = [
   {
     name: "WhatsOrder",
     category: "Commerce / WhatsApp Ordering",

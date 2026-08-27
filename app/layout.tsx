@@ -3,8 +3,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import { siteConfig } from "@/lib/site";
 import SiteAnalytics from "@/components/SiteAnalytics";
+import StructuredData from "@/components/StructuredData";
+
+import { siteConfig } from "@/lib/site";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -54,10 +56,6 @@ export const metadata: Metadata = {
     "technology solutions Nigeria",
   ],
 
-  alternates: {
-    canonical: "/",
-  },
-
   robots: {
     index: true,
     follow: true,
@@ -73,10 +71,10 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-
     locale: "en_NG",
 
-    url: siteConfig.url,
+    url:
+      siteConfig.url,
 
     siteName:
       siteConfig.fullName,
@@ -107,11 +105,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-  {children}
+        <StructuredData />
 
-  <GoogleAnalytics />
-  <SiteAnalytics />
-</body>
+        {children}
+
+        <GoogleAnalytics />
+        <SiteAnalytics />
+      </body>
     </html>
   );
 }

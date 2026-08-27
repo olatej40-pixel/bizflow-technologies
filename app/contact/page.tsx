@@ -11,6 +11,21 @@ export const metadata: Metadata = {
 
   description:
     "Contact BizFlow Technologies to discuss website development, custom software, SaaS development, business automation and other digital projects.",
+
+  alternates: {
+    canonical: "/contact",
+  },
+
+  openGraph: {
+    title:
+      "Contact | BizFlow Technologies",
+
+    description:
+      "Discuss your website, software, SaaS or business automation project with BizFlow Technologies.",
+
+    url:
+      "/contact",
+  },
 };
 
 const projectTypes = [

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import ProjectInquiryForm from "@/components/ProjectInquiryForm";
@@ -5,6 +6,18 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
 import { siteConfig } from "@/lib/site";
+
+
+/* ==========================================
+   HOMEPAGE SEO METADATA
+========================================== */
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
+
 
 const services = [
   {
@@ -45,6 +58,7 @@ const services = [
   },
 ];
 
+
 const solutions = [
   "Inventory Management",
   "Booking & Appointment Systems",
@@ -55,6 +69,7 @@ const solutions = [
   "E-commerce Solutions",
   "Custom Business Portals",
 ];
+
 
 const projects = [
   {
@@ -80,12 +95,17 @@ const projects = [
   },
 ];
 
+
 export default function Home() {
   return (
     <main>
       <SiteHeader />
 
-      {/* HERO */}
+
+      {/* ==========================================
+          HERO
+      ========================================== */}
+
       <section
         id="home"
         className="hero"
@@ -95,6 +115,7 @@ export default function Home() {
 
         <div className="container hero-grid">
           <div className="hero-content">
+
             <div className="eyebrow">
               <span></span>
               Software • Web • Digital Solutions
@@ -118,6 +139,7 @@ export default function Home() {
             </p>
 
             <div className="hero-actions">
+
               <Link
                 href="/contact"
                 className="btn btn-primary"
@@ -132,9 +154,11 @@ export default function Home() {
               >
                 Explore Our Products
               </Link>
+
             </div>
 
             <div className="hero-trust">
+
               <div>
                 <strong>Web</strong>
                 <span>Development</span>
@@ -149,12 +173,20 @@ export default function Home() {
                 <strong>SaaS</strong>
                 <span>Products</span>
               </div>
+
             </div>
+
           </div>
 
+
+          {/* HERO VISUAL */}
+
           <div className="hero-visual">
+
             <div className="dashboard-card">
+
               <div className="dashboard-top">
+
                 <div className="dashboard-dots">
                   <span></span>
                   <span></span>
@@ -165,9 +197,12 @@ export default function Home() {
                   <i></i>
                   Live System
                 </span>
+
               </div>
 
+
               <div className="dashboard-body">
+
                 <aside className="mock-sidebar">
                   <div className="mock-logo"></div>
                   <div className="mock-nav active"></div>
@@ -176,8 +211,11 @@ export default function Home() {
                   <div className="mock-nav small"></div>
                 </aside>
 
+
                 <div className="mock-content">
+
                   <div className="mock-heading">
+
                     <div>
                       <span></span>
                       <span></span>
@@ -187,9 +225,12 @@ export default function Home() {
                       type="button"
                       aria-label="Dashboard action"
                     ></button>
+
                   </div>
 
+
                   <div className="mock-stats">
+
                     <div>
                       <small>Websites</small>
                       <strong>Build</strong>
@@ -207,10 +248,14 @@ export default function Home() {
                       <strong>SaaS</strong>
                       <span>Modern</span>
                     </div>
+
                   </div>
 
+
                   <div className="mock-chart">
+
                     <div className="chart-label">
+
                       <span>
                         Digital growth
                       </span>
@@ -218,6 +263,7 @@ export default function Home() {
                       <strong>
                         Active
                       </strong>
+
                     </div>
 
                     <div className="bars">
@@ -230,48 +276,74 @@ export default function Home() {
                       <i style={{ height: "65%" }}></i>
                       <i style={{ height: "88%" }}></i>
                     </div>
+
                   </div>
+
                 </div>
+
               </div>
+
             </div>
 
+
             <div className="floating-card floating-card-one">
+
               <span>✓</span>
 
               <div>
+
                 <strong>
                   Custom Solutions
                 </strong>
+
                 <small>
                   Built for your business
                 </small>
+
               </div>
+
             </div>
 
+
             <div className="floating-card floating-card-two">
+
               <span>↗</span>
 
               <div>
+
                 <strong>
                   Scalable
                 </strong>
+
                 <small>
                   Ready to grow
                 </small>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
       </section>
 
-      {/* SERVICES */}
+
+
+      {/* ==========================================
+          SERVICES
+      ========================================== */}
+
       <section
         id="services"
         className="section"
       >
         <div className="container">
+
           <div className="section-heading">
+
             <div>
+
               <span className="section-label">
                 What We Do
               </span>
@@ -280,6 +352,7 @@ export default function Home() {
                 Technology services built around
                 your goals.
               </h2>
+
             </div>
 
             <p>
@@ -288,14 +361,19 @@ export default function Home() {
               practical digital solutions that
               help businesses work smarter.
             </p>
+
           </div>
 
+
           <div className="services-grid">
+
             {services.map((service) => (
+
               <article
                 className="service-card"
                 key={service.number}
               >
+
                 <span className="service-number">
                   {service.number}
                 </span>
@@ -312,19 +390,30 @@ export default function Home() {
                   Learn more
                   <span>→</span>
                 </Link>
+
               </article>
+
             ))}
+
           </div>
+
         </div>
       </section>
 
-      {/* SOLUTIONS */}
+
+
+      {/* ==========================================
+          SOLUTIONS
+      ========================================== */}
+
       <section
         id="solutions"
         className="solutions-section"
       >
         <div className="container solutions-grid">
+
           <div className="solutions-content">
+
             <span className="section-label light-label">
               Business Solutions
             </span>
@@ -352,15 +441,20 @@ export default function Home() {
               Discuss Your Challenge
               <span>→</span>
             </Link>
+
           </div>
 
+
           <div className="solutions-list">
+
             {solutions.map(
               (solution, index) => (
+
                 <div
                   className="solution-item"
                   key={solution}
                 >
+
                   <span>
                     {String(index + 1).padStart(
                       2,
@@ -373,21 +467,33 @@ export default function Home() {
                   </strong>
 
                   <i>↗</i>
+
                 </div>
+
               )
             )}
+
           </div>
+
         </div>
       </section>
 
-      {/* PRODUCTS */}
+
+
+      {/* ==========================================
+          PRODUCTS
+      ========================================== */}
+
       <section
         id="products"
         className="section products-section"
       >
         <div className="container">
+
           <div className="section-heading">
+
             <div>
+
               <span className="section-label">
                 Products & Projects
               </span>
@@ -396,6 +502,7 @@ export default function Home() {
                 Solutions we build, launch and
                 grow.
               </h2>
+
             </div>
 
             <p>
@@ -404,21 +511,28 @@ export default function Home() {
               business operations and create
               scalable digital opportunities.
             </p>
+
           </div>
 
+
           <div className="projects-grid">
+
             {projects.map(
               (project, index) => (
+
                 <article
                   className="project-card"
                   key={project.title}
                 >
+
                   <div
                     className={`project-visual visual-${
                       index + 1
                     }`}
                   >
+
                     <div className="project-window">
+
                       <div className="project-window-top">
                         <span></span>
                         <span></span>
@@ -426,6 +540,7 @@ export default function Home() {
                       </div>
 
                       <div className="project-window-body">
+
                         <div className="project-mini-sidebar"></div>
 
                         <div className="project-mini-content">
@@ -433,15 +548,21 @@ export default function Home() {
                           <div></div>
                           <div></div>
                         </div>
+
                       </div>
+
                     </div>
+
 
                     <span className="project-badge">
                       {project.status}
                     </span>
+
                   </div>
 
+
                   <div className="project-info">
+
                     <span>
                       {project.category}
                     </span>
@@ -458,21 +579,33 @@ export default function Home() {
                       View solution
                       <span>→</span>
                     </Link>
+
                   </div>
+
                 </article>
+
               )
             )}
+
           </div>
+
         </div>
       </section>
 
-      {/* ABOUT */}
+
+
+      {/* ==========================================
+          ABOUT
+      ========================================== */}
+
       <section
         id="about"
         className="section about-section"
       >
         <div className="container about-grid">
+
           <div className="about-content">
+
             <span className="section-label">
               Why Work With Us
             </span>
@@ -493,11 +626,15 @@ export default function Home() {
               software product we develop.
             </p>
 
+
             <div className="about-points">
+
               <div>
+
                 <span>✓</span>
 
                 <div>
+
                   <strong>
                     Business-focused development
                   </strong>
@@ -507,13 +644,18 @@ export default function Home() {
                     objectives before selecting the
                     technology.
                   </p>
+
                 </div>
+
               </div>
 
+
               <div>
+
                 <span>✓</span>
 
                 <div>
+
                   <strong>
                     Built for growth
                   </strong>
@@ -523,13 +665,18 @@ export default function Home() {
                     evolve as your requirements and
                     customer base grow.
                   </p>
+
                 </div>
+
               </div>
 
+
               <div>
+
                 <span>✓</span>
 
                 <div>
+
                   <strong>
                     Long-term support
                   </strong>
@@ -539,11 +686,16 @@ export default function Home() {
                     maintaining your solution after
                     launch.
                   </p>
+
                 </div>
+
               </div>
+
             </div>
 
+
             <div className="hero-actions">
+
               <Link
                 href="/about"
                 className="btn btn-secondary"
@@ -551,13 +703,18 @@ export default function Home() {
                 Learn More About BizFlow
                 <span>→</span>
               </Link>
+
             </div>
+
           </div>
 
+
           <div className="about-panel">
+
             <span className="about-panel-label">
               Our Approach
             </span>
+
 
             {[
               [
@@ -581,13 +738,18 @@ export default function Home() {
                 "We deploy and support future improvements.",
               ],
             ].map(([number, title, text]) => (
+
               <div
                 className="process-step"
                 key={number}
               >
-                <span>{number}</span>
+
+                <span>
+                  {number}
+                </span>
 
                 <div>
+
                   <strong>
                     {title}
                   </strong>
@@ -595,18 +757,32 @@ export default function Home() {
                   <p>
                     {text}
                   </p>
+
                 </div>
+
               </div>
+
             ))}
+
           </div>
+
         </div>
       </section>
 
-      {/* CTA */}
+
+
+      {/* ==========================================
+          CTA
+      ========================================== */}
+
       <section className="cta-section">
+
         <div className="container">
+
           <div className="cta-card">
+
             <div>
+
               <span className="section-label light-label">
                 Have an idea?
               </span>
@@ -620,7 +796,9 @@ export default function Home() {
                 Tell us what you want to build or
                 the problem you need to solve.
               </p>
+
             </div>
+
 
             <Link
               href="/contact"
@@ -629,17 +807,27 @@ export default function Home() {
               Start a Conversation
               <span>→</span>
             </Link>
+
           </div>
+
         </div>
+
       </section>
 
-      {/* QUICK CONTACT */}
+
+
+      {/* ==========================================
+          QUICK CONTACT
+      ========================================== */}
+
       <section
         id="contact"
         className="section contact-section"
       >
         <div className="container contact-grid">
+
           <div className="contact-content">
+
             <span className="section-label">
               Contact Us
             </span>
@@ -655,13 +843,17 @@ export default function Home() {
               and let&apos;s discuss the solution.
             </p>
 
+
             <div className="contact-options">
+
               <a
                 href={`mailto:${siteConfig.email}`}
               >
+
                 <span>@</span>
 
                 <div>
+
                   <small>
                     Email us
                   </small>
@@ -669,17 +861,22 @@ export default function Home() {
                   <strong>
                     {siteConfig.email}
                   </strong>
+
                 </div>
+
               </a>
+
 
               <a
                 href={siteConfig.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
+
                 <span>W</span>
 
                 <div>
+
                   <small>
                     WhatsApp
                   </small>
@@ -687,16 +884,24 @@ export default function Home() {
                   <strong>
                     Chat with us
                   </strong>
+
                 </div>
+
               </a>
+
             </div>
+
           </div>
 
+
           <ProjectInquiryForm />
+
         </div>
       </section>
 
+
       <SiteFooter />
+
     </main>
   );
 }

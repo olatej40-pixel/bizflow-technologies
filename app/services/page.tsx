@@ -5,13 +5,26 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Services | BizFlow Technologies",
+  title: "Services",
 
   description:
     "Explore BizFlow Technologies services including website development, custom software, web applications, SaaS development, business automation, customization and technical support.",
-};
 
-const services = [
+  alternates: {
+    canonical: "/services",
+  },
+
+  openGraph: {
+    title:
+      "Services | BizFlow Technologies",
+
+    description:
+      "Professional website development, custom software, SaaS development, business automation and digital technology services.",
+
+    url:
+      "/services",
+  },
+};const services = [
   {
     number: "01",
     title: "Website Development",

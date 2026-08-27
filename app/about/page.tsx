@@ -8,7 +8,22 @@ export const metadata: Metadata = {
   title: "About",
 
   description:
-    "Learn about BizFlow Technologies, our mission, development approach and commitment to building useful digital solutions.",
+    "Learn about BizFlow Technologies, our mission, development approach and commitment to building practical digital solutions for real business needs.",
+
+  alternates: {
+    canonical: "/about",
+  },
+
+  openGraph: {
+    title:
+      "About | BizFlow Technologies",
+
+    description:
+      "Learn about BizFlow Technologies and our approach to building useful, scalable digital solutions.",
+
+    url:
+      "/about",
+  },
 };
 
 const values = [
