@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 
+import "./premium.css";
+
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import SiteAnalytics from "@/components/SiteAnalytics";
 import StructuredData from "@/components/StructuredData";

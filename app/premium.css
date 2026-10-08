@@ -1,0 +1,1231 @@
+/* =========================================================
+   BIZFLOW PREMIUM OVERRIDES
+   Loaded AFTER globals.css
+   ========================================================= */
+
+/* =========================================================
+   SERVICES PAGE — PACKAGES & PRICING
+========================================================= */
+
+#pricing {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at top right, rgba(91, 76, 240, 0.08), transparent 34%),
+    #f8f9fc;
+}
+
+#pricing .detailed-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 46px;
+}
+
+#pricing .detailed-service-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 34px;
+  border: 1px solid #e7e9f2;
+  border-radius: 22px;
+  background: #ffffff;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+#pricing .detailed-service-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(91, 76, 240, 0.35);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.1);
+}
+
+#pricing .detailed-service-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+#pricing .detailed-service-top > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+  background: rgba(91, 76, 240, 0.08);
+  color: #5b4cf0;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+#pricing .detailed-service-top i {
+  color: #5b4cf0;
+  font-size: 20px;
+  font-style: normal;
+}
+
+#pricing .section-label {
+  display: inline-flex;
+  align-self: flex-start;
+  margin-bottom: 12px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(91, 76, 240, 0.08);
+  color: #5b4cf0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#pricing .detailed-service-card > h3:first-of-type {
+  margin: 0 0 14px;
+  color: #101828;
+  font-size: 22px;
+  line-height: 1.3;
+}
+
+#pricing .detailed-service-card > p {
+  margin-bottom: 22px;
+  color: #667085;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+#pricing .detailed-service-card > h3:nth-of-type(2) {
+  margin: 4px 0 24px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #eceef4;
+  color: #667085;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#pricing .detailed-service-card > h3:nth-of-type(2) span {
+  display: block;
+  margin-top: 7px;
+  color: #101828;
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+#pricing .detailed-service-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin: 0 0 30px;
+  padding: 0;
+  list-style: none;
+}
+
+#pricing .detailed-service-card li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #475467;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+#pricing .detailed-service-card li > span {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  border-radius: 50%;
+  background: rgba(91, 76, 240, 0.1);
+  color: #5b4cf0;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+#pricing .detailed-service-card > a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin-top: auto;
+  padding: 14px 18px;
+  border: 1px solid #5b4cf0;
+  border-radius: 12px;
+  background: transparent;
+  color: #5b4cf0;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+#pricing .detailed-service-card > a:hover {
+  background: #5b4cf0;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+#pricing .detailed-service-card:nth-child(2) {
+  border: 2px solid #5b4cf0;
+  box-shadow: 0 22px 55px rgba(91, 76, 240, 0.15);
+}
+
+#pricing .detailed-service-card:nth-child(2)::before {
+  content: "POPULAR";
+  position: absolute;
+  top: 20px;
+  right: 22px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: #5b4cf0;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+#pricing .services-page-heading {
+  max-width: 760px;
+}
+
+#pricing .services-page-heading h2 {
+  max-width: 700px;
+}
+
+/* =========================================================
+   HOMEPAGE HERO — PREMIUM BACKGROUND
+========================================================= */
+
+.hero {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  padding-bottom: 95px;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5, 14, 31, 0.98) 0%,
+      rgba(5, 14, 31, 0.95) 34%,
+      rgba(6, 16, 35, 0.82) 58%,
+      rgba(7, 18, 40, 0.64) 100%
+    ),
+    url("/images/bizflow-hero-bg.png");
+  background-size: cover;
+  background-position: 61% center;
+  background-repeat: no-repeat;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  opacity: 1;
+  pointer-events: none;
+  mask-image: none;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 12, 28, 0.08) 0%,
+      rgba(4, 12, 28, 0.10) 48%,
+      rgba(4, 12, 28, 0.36) 70%,
+      rgba(4, 12, 28, 0.72) 100%
+    ),
+    radial-gradient(circle at 68% 45%, rgba(91, 76, 240, 0.11), transparent 37%),
+    linear-gradient(180deg, transparent 65%, rgba(3, 10, 24, 0.26) 100%);
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  left: -5%;
+  bottom: -105px;
+  width: 110%;
+  height: 165px;
+  background: #f8f9fc;
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-grid,
+.hero-content,
+.hero-visual {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.22);
+}
+
+.hero-content h1 span {
+  background: linear-gradient(90deg, #7c6cff 0%, #58a6ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(91, 76, 240, 0.18));
+}
+
+.hero-description {
+  color: #d7deeb !important;
+  max-width: 650px;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.hero .eyebrow {
+  color: #aaa3ff !important;
+  background: rgba(91, 76, 240, 0.10);
+  border: 1px solid rgba(122, 108, 255, 0.20);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  backdrop-filter: blur(8px);
+}
+
+.hero .eyebrow span {
+  background: #7b6cff !important;
+}
+
+.hero .btn-primary {
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #6d5dfc, #4f46e5);
+  border-color: transparent;
+  font-weight: 800;
+  box-shadow: 0 12px 30px rgba(91, 76, 240, 0.28);
+}
+
+.hero .btn-secondary {
+  color: #ffffff !important;
+  background: rgba(8, 20, 42, 0.62);
+  border-color: rgba(255, 255, 255, 0.22);
+  font-weight: 700;
+  backdrop-filter: blur(10px);
+}
+
+.hero .btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.38);
+}
+
+.hero-trust {
+  background: transparent !important;
+  border-color: rgba(255, 255, 255, 0.13);
+}
+
+.hero-trust strong {
+  color: #ffffff !important;
+  font-weight: 800;
+}
+
+.hero-trust span {
+  color: #c2cad8 !important;
+  font-weight: 500;
+}
+
+.hero-glow {
+  opacity: 0.15 !important;
+}
+
+.hero-visual {
+  z-index: 4;
+}
+
+.dashboard-card {
+  position: relative;
+  z-index: 3;
+  box-shadow:
+    0 30px 90px rgba(0, 0, 0, 0.38),
+    0 0 45px rgba(91, 76, 240, 0.10);
+}
+
+.floating-card {
+  z-index: 5;
+}
+
+.floating-card strong {
+  color: #101828 !important;
+  font-weight: 800;
+}
+
+.floating-card small {
+  color: #667085 !important;
+  font-weight: 500;
+}
+
+.hero + .section {
+  position: relative;
+  background: #f8f9fc;
+  padding-top: 110px;
+}
+
+/* =========================================================
+   HOMEPAGE SERVICES — PREMIUM CARDS
+========================================================= */
+
+#services {
+  background: #f8f9fc !important;
+}
+
+#services .section-label {
+  color: #635bff !important;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+#services .section-heading h2 {
+  color: #101828 !important;
+  font-weight: 800;
+}
+
+#services .section-heading p {
+  color: #5f6b7a !important;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+#services .services-grid {
+  border: 0;
+  gap: 22px;
+}
+
+#services .service-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 249, 255, 0.96)
+    ) !important;
+  border: 1px solid rgba(91, 76, 240, 0.10);
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(15, 23, 42, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+#services .service-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(91, 76, 240, 0.30);
+  box-shadow:
+    0 22px 50px rgba(15, 23, 42, 0.11),
+    0 8px 25px rgba(91, 76, 240, 0.08);
+}
+
+#services .service-card::before {
+  content: "";
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  right: -80px;
+  top: -90px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(91, 76, 240, 0.11), transparent 70%);
+  pointer-events: none;
+}
+
+#services .service-number {
+  color: #635bff !important;
+  font-weight: 800;
+}
+
+#services .service-card h3 {
+  color: #101828 !important;
+  font-weight: 800;
+}
+
+#services .service-card p {
+  color: #667085 !important;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+#services .service-card a {
+  color: #5b4cf0 !important;
+  font-weight: 700;
+}
+
+/* =========================================================
+   BUSINESS SOLUTIONS — DARK PREMIUM SECTION
+========================================================= */
+
+.solutions-section {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(91, 76, 240, 0.22), transparent 32%),
+    radial-gradient(circle at 10% 90%, rgba(14, 165, 233, 0.10), transparent 30%),
+    linear-gradient(135deg, #071325 0%, #0b1730 50%, #111b38 100%) !important;
+  color: #ffffff;
+}
+
+.solutions-section::before {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  right: -180px;
+  top: -220px;
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(91, 76, 240, 0.20), transparent 68%);
+  filter: blur(15px);
+}
+
+.solutions-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.solutions-section .section-label {
+  color: #9187ff !important;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.solutions-section h2 {
+  color: #ffffff !important;
+  font-weight: 800;
+}
+
+.solutions-section h2 span {
+  background: linear-gradient(90deg, #8073ff, #56a8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.solutions-section p {
+  color: #cbd5e1 !important;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.solution-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.solution-item:hover {
+  background: rgba(255, 255, 255, 0.035);
+  transform: translateX(4px);
+}
+
+.solution-item > span {
+  color: #8f9bad !important;
+  font-weight: 600;
+}
+
+.solution-item strong {
+  color: #ffffff !important;
+  font-weight: 700;
+}
+
+.solution-item i {
+  color: #8073ff !important;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.solutions-section .btn-light {
+  background: #ffffff !important;
+  color: #0b1324 !important;
+  border-color: #ffffff !important;
+  font-weight: 800;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================================
+   HOMEPAGE PRODUCTS — PREMIUM CARDS
+========================================================= */
+
+#products {
+  position: relative;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8fc 100%) !important;
+}
+
+#products .section-label {
+  color: #635bff !important;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+#products .section-heading h2 {
+  color: #101828 !important;
+  font-weight: 800;
+}
+
+#products .section-heading p {
+  color: #667085 !important;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+#products .project-card {
+  position: relative;
+  overflow: hidden;
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 22px;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.07);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+#products .project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(91, 76, 240, 0.25);
+  box-shadow:
+    0 25px 60px rgba(15, 23, 42, 0.12),
+    0 8px 30px rgba(91, 76, 240, 0.08);
+}
+
+#products .project-visual {
+  position: relative;
+  min-height: 220px;
+  overflow: hidden;
+}
+
+#products .project-visual::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -80px;
+  top: -100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(92, 76, 240, 0.30), transparent 70%);
+  filter: blur(8px);
+}
+
+#products .project-visual::after {
+  content: "";
+  position: absolute;
+  left: -10%;
+  bottom: 26px;
+  width: 120%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(98, 113, 255, 0.65), transparent);
+  box-shadow: 0 0 25px rgba(91, 76, 240, 0.45);
+}
+
+#products .project-window {
+  position: relative;
+  z-index: 2;
+  width: 82%;
+  margin: 34px auto 0;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+  transform: perspective(900px) rotateX(2deg) rotateY(-3deg);
+  transition: transform 0.3s ease;
+}
+
+#products .project-card:hover .project-window {
+  transform: perspective(900px) rotateX(0deg) rotateY(0deg) translateY(-4px);
+}
+
+#products .project-badge {
+  z-index: 3;
+  padding: 7px 11px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #5b4cf0 !important;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+}
+
+#products .project-info {
+  padding: 26px 26px 28px;
+}
+
+#products .project-info > span {
+  color: #635bff !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+}
+
+#products .project-info h3 {
+  color: #101828 !important;
+  font-weight: 800;
+}
+
+#products .project-info p {
+  color: #667085 !important;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+#products .project-info a {
+  color: #5b4cf0 !important;
+  font-weight: 700;
+}
+
+#products .visual-1 {
+  background:
+    radial-gradient(circle at 75% 25%, rgba(37, 211, 102, 0.18), transparent 30%),
+    linear-gradient(135deg, #081b18 0%, #0b2723 50%, #10372f 100%) !important;
+}
+
+#products .visual-2 {
+  background:
+    radial-gradient(circle at 75% 25%, rgba(99, 102, 241, 0.30), transparent 32%),
+    linear-gradient(135deg, #0b1330 0%, #131c43 50%, #1a2554 100%) !important;
+}
+
+#products .visual-3 {
+  background:
+    radial-gradient(circle at 75% 25%, rgba(14, 165, 233, 0.22), transparent 32%),
+    linear-gradient(135deg, #07192a 0%, #0b2439 50%, #10344e 100%) !important;
+}
+
+/* =========================================================
+   HOMEPAGE ABOUT — PREMIUM POLISH
+========================================================= */
+
+#about {
+  position: relative;
+  background: linear-gradient(180deg, #f8f9fc 0%, #ffffff 100%) !important;
+}
+
+#about .section-label {
+  color: #635bff !important;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+#about h2 {
+  color: #101828 !important;
+  font-weight: 800;
+}
+
+#about h2 span {
+  background: linear-gradient(90deg, #6657f7 0%, #4f9dff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#about .about-content > p {
+  color: #667085 !important;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+#about .about-points {
+  display: grid;
+  gap: 18px;
+}
+
+#about .about-points > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.06);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.84);
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.045);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+
+#about .about-points > div:hover {
+  transform: translateY(-3px);
+  border-color: rgba(91, 76, 240, 0.22);
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+#about .about-points > div > span {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(91, 76, 240, 0.10);
+  color: #5b4cf0 !important;
+  font-weight: 800;
+}
+
+#about .about-points strong {
+  color: #101828 !important;
+  font-weight: 800;
+}
+
+#about .about-points p {
+  color: #667085 !important;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+#about .about-panel {
+  position: relative;
+  overflow: hidden;
+  padding: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  border-radius: 24px;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(91, 76, 240, 0.24), transparent 32%),
+    linear-gradient(135deg, #091427 0%, #0f1c38 52%, #152449 100%) !important;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.18);
+}
+
+#about .about-panel::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -90px;
+  top: -100px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(91, 76, 240, 0.28), transparent 70%);
+  pointer-events: none;
+}
+
+#about .about-panel-label {
+  position: relative;
+  z-index: 2;
+  color: #9e95ff !important;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+#about .process-step {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 14px;
+  padding: 21px 0;
+  border-top: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+#about .process-step:last-child {
+  border-bottom: 0;
+}
+
+#about .process-step > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #8f84ff !important;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+#about .process-step strong {
+  color: #ffffff !important;
+  font-weight: 800;
+}
+
+#about .process-step p {
+  color: #b8c4d8 !important;
+  font-weight: 500;
+  line-height: 1.65;
+}
+
+#about .btn-secondary {
+  color: #101828 !important;
+  background: #ffffff !important;
+  border: 1px solid #e4e7ec !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.07);
+}
+
+/* =========================================================
+   HOMEPAGE CTA — PREMIUM POLISH
+========================================================= */
+
+.cta-section {
+  position: relative;
+  padding: 90px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8fc 100%) !important;
+}
+
+.cta-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 48px 52px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(99, 102, 241, 0.30), transparent 32%),
+    linear-gradient(135deg, #071325 0%, #0d1930 52%, #152449 100%) !important;
+  box-shadow: 0 30px 70px rgba(15, 23, 42, 0.18);
+}
+
+.cta-card::before {
+  content: "";
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  right: -120px;
+  bottom: -150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(91, 76, 240, 0.35), transparent 70%);
+  pointer-events: none;
+}
+
+.cta-card > * {
+  position: relative;
+  z-index: 2;
+}
+
+.cta-card .section-label {
+  color: #9d95ff !important;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.cta-card h2 {
+  color: #ffffff !important;
+  font-weight: 800;
+}
+
+.cta-card p {
+  color: #c3cede !important;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.cta-card .btn-white {
+  background: #ffffff !important;
+  color: #101828 !important;
+  border: 1px solid #ffffff !important;
+  font-weight: 800;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
+}
+
+/* =========================================================
+   HOMEPAGE CONTACT — PREMIUM POLISH
+========================================================= */
+
+#contact {
+  position: relative;
+  background: linear-gradient(180deg, #f8f9fc 0%, #ffffff 100%) !important;
+}
+
+#contact .section-label {
+  color: #635bff !important;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+#contact .contact-content h2 {
+  color: #101828 !important;
+  font-weight: 800;
+}
+
+#contact .contact-content > p {
+  color: #667085 !important;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+#contact .contact-options {
+  display: grid;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+#contact .contact-options a {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid rgba(15, 23, 42, 0.07);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.90);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.045);
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#contact .contact-options a:hover {
+  transform: translateY(-3px);
+  border-color: rgba(91, 76, 240, 0.25);
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.08);
+}
+
+#contact .contact-options a > span {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: rgba(91, 76, 240, 0.10);
+  color: #5b4cf0 !important;
+  font-weight: 800;
+}
+
+#contact .contact-options small {
+  color: #667085 !important;
+  font-weight: 600;
+}
+
+#contact .contact-options strong {
+  color: #101828 !important;
+  font-weight: 800;
+}
+
+#contact .quote-form {
+  position: relative;
+  padding: 34px;
+  border: 1px solid rgba(91, 76, 240, 0.10);
+  border-radius: 22px;
+  background: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.09);
+}
+
+#contact .quote-form-heading span {
+  color: #635bff !important;
+  font-weight: 800;
+}
+
+#contact .quote-form-heading h2 {
+  color: #101828 !important;
+  font-weight: 800;
+}
+
+#contact .quote-form-heading p {
+  color: #667085 !important;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+#contact .quote-form label {
+  color: #344054 !important;
+  font-weight: 700;
+}
+
+#contact .quote-form input,
+#contact .quote-form select,
+#contact .quote-form textarea {
+  color: #101828 !important;
+  background: #ffffff !important;
+  border: 1px solid #d7dce5 !important;
+  border-radius: 10px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+#contact .quote-form input:focus,
+#contact .quote-form select:focus,
+#contact .quote-form textarea:focus {
+  outline: none;
+  border-color: #635bff !important;
+  box-shadow: 0 0 0 3px rgba(99, 91, 255, 0.12);
+}
+
+#contact .quote-submit-button {
+  background: linear-gradient(135deg, #6757f7, #4f46e5) !important;
+  color: #ffffff !important;
+  font-weight: 800;
+  border: 0;
+  box-shadow: 0 12px 28px rgba(91, 76, 240, 0.22);
+}
+
+#contact .quote-form-note {
+  color: #7a8494 !important;
+  font-weight: 500;
+}
+
+/* =========================================================
+   INNER HERO CONTRAST
+========================================================= */
+
+.inner-hero h1 {
+  color: #ffffff !important;
+}
+
+.inner-hero h1 span {
+  color: #7c6cff !important;
+}
+
+.inner-hero p {
+  color: #d6deeb !important;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.inner-hero .section-label {
+  color: #aaa3ff !important;
+  font-weight: 800;
+}
+
+/* =========================================================
+   RESPONSIVE PREMIUM OVERRIDES
+========================================================= */
+
+@media (max-width: 1050px) {
+  #pricing .detailed-services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(5, 14, 31, 0.97) 0%,
+        rgba(5, 14, 31, 0.88) 60%,
+        rgba(5, 14, 31, 0.72) 100%
+      ),
+      url("/images/bizflow-hero-bg.png");
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@media (max-width: 800px) {
+  .cta-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 36px 28px;
+  }
+
+  #contact .quote-form {
+    padding: 26px 22px;
+  }
+
+  #contact .contact-options a:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .hero {
+    padding-bottom: 70px;
+    background:
+      linear-gradient(
+        180deg,
+        rgba(5, 14, 31, 0.96) 0%,
+        rgba(5, 14, 31, 0.92) 55%,
+        rgba(5, 14, 31, 0.86) 100%
+      ),
+      url("/images/bizflow-hero-bg.png");
+    background-size: cover;
+    background-position: 64% center;
+  }
+
+  .hero::before {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(4, 12, 28, 0.14) 0%,
+        rgba(4, 12, 28, 0.38) 60%,
+        rgba(4, 12, 28, 0.74) 100%
+      );
+  }
+
+  .hero::after {
+    bottom: -80px;
+    height: 120px;
+  }
+
+  .hero + .section {
+    padding-top: 85px;
+  }
+
+  .hero-description,
+  .inner-hero p {
+    color: #dce3ee !important;
+  }
+
+  #services .service-card,
+  #products .project-card {
+    border-radius: 16px;
+  }
+
+  #services .service-card:hover,
+  #products .project-card:hover,
+  #about .about-points > div:hover {
+    transform: none;
+  }
+
+  .solutions-section {
+    background: linear-gradient(180deg, #071325 0%, #0b1730 100%) !important;
+  }
+
+  .solutions-section p {
+    color: #d5dce8 !important;
+  }
+
+  #products .project-visual {
+    min-height: 190px;
+  }
+
+  #products .project-window {
+    width: 88%;
+    margin-top: 30px;
+  }
+
+  #about .about-panel {
+    padding: 26px 22px;
+    border-radius: 18px;
+  }
+
+  #about .process-step {
+    grid-template-columns: 42px 1fr;
+  }
+
+  #pricing .detailed-services-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 32px;
+  }
+
+  #pricing .detailed-service-card {
+    padding: 26px 22px;
+  }
+
+  #pricing .detailed-service-card > h3:nth-of-type(2) span {
+    font-size: 27px;
+  }
+
+  #pricing .detailed-service-card:nth-child(2)::before {
+    top: 16px;
+    right: 16px;
+  }
+}
