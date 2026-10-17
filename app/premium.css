@@ -1803,3 +1803,362 @@ a.biz-footer-contact-item:hover {
   }
 
 }
+
+/* =========================================================
+   REAL PRODUCT SCREENSHOTS
+========================================================= */
+
+#products .project-visual {
+  position: relative;
+  min-height: 310px;
+  padding: 52px 24px 0;
+  overflow: hidden;
+}
+
+
+/* Browser mockup */
+
+#products .project-browser {
+  position: relative;
+  z-index: 2;
+
+  width: 94%;
+  margin: 0 auto;
+
+  overflow: hidden;
+
+  border:
+    1px solid rgba(255, 255, 255, 0.18);
+
+  border-radius:
+    16px 16px 0 0;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 28px 55px rgba(0, 0, 0, 0.30);
+
+  transform:
+    perspective(1000px)
+    rotateX(1deg)
+    rotateY(-2deg);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+
+#products .project-card:hover .project-browser {
+  transform:
+    perspective(1000px)
+    rotateX(0deg)
+    rotateY(0deg)
+    translateY(-6px);
+
+  box-shadow:
+    0 34px 70px rgba(0, 0, 0, 0.36);
+}
+
+
+/* Browser top bar */
+
+#products .project-browser-bar {
+  height: 38px;
+
+  padding:
+    0 12px;
+
+  display: grid;
+
+  grid-template-columns:
+    55px 1fr 55px;
+
+  align-items: center;
+
+  border-bottom:
+    1px solid #eaecf0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff,
+      #f7f8fb
+    );
+}
+
+
+#products .project-browser-dots {
+  display: flex;
+  gap: 5px;
+}
+
+
+#products .project-browser-dots span {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #d0d5dd;
+}
+
+
+#products .project-browser-address {
+  justify-self: center;
+
+  max-width: 150px;
+
+  padding:
+    4px 15px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+
+  color: #98a2b3;
+
+  background: #f2f4f7;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+
+/* Screenshot */
+
+#products .project-screenshot {
+  position: relative;
+
+  aspect-ratio: 16 / 10;
+
+  overflow: hidden;
+
+  background: #f8fafc;
+}
+
+
+#products .project-screenshot-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: top center;
+
+  transition:
+    transform 0.45s ease;
+}
+
+
+#products .project-card:hover
+.project-screenshot-image {
+  transform: scale(1.025);
+}
+
+
+/* Badge stays above screenshot */
+
+#products .project-badge {
+  z-index: 5;
+}
+
+
+/* =========================================================
+   RESPONSIVE PRODUCT SCREENSHOTS
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  #products .project-visual {
+    min-height: 285px;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  #products .project-visual {
+    min-height: 250px;
+    padding:
+      48px 18px 0;
+  }
+
+
+  #products .project-browser {
+    width: 96%;
+
+    transform: none;
+  }
+
+
+  #products .project-card:hover
+  .project-browser {
+    transform: none;
+  }
+
+
+  #products .project-browser-address {
+    max-width: 120px;
+  }
+
+}
+
+/* =========================================================
+   CUSTOM BUSINESS SYSTEM — VISUAL BALANCE
+========================================================= */
+
+#products .visual-3 .project-screenshot-image {
+  transform: scale(1.18);
+  transform-origin: center top;
+}
+
+#products .project-card:hover
+.visual-3 .project-screenshot-image {
+  transform: scale(1.22);
+}
+
+@media (max-width: 700px) {
+  #products .visual-3 .project-screenshot-image {
+    transform: scale(1.12);
+  }
+
+  #products .project-card:hover
+  .visual-3 .project-screenshot-image {
+    transform: scale(1.12);
+  }
+}
+
+/* =========================================================
+   HOMEPAGE SECTION SPACING — FINAL POLISH
+========================================================= */
+
+/* General homepage sections */
+
+#services,
+#products,
+#about,
+#contact {
+  padding-top: 90px;
+  padding-bottom: 90px;
+}
+
+
+/* Hero into Services */
+
+.hero + .section {
+  padding-top: 95px;
+}
+
+
+/* Business Solutions */
+
+.solutions-section {
+  padding-top: 95px;
+  padding-bottom: 95px;
+}
+
+
+/* CTA */
+
+.cta-section {
+  padding-top: 65px;
+  padding-bottom: 75px;
+}
+
+
+/* Reduce oversized heading gaps */
+
+#services .section-heading,
+#products .section-heading {
+  margin-bottom: 44px;
+}
+
+
+/* Products → About transition */
+
+#products {
+  padding-bottom: 85px;
+}
+
+#about {
+  padding-top: 85px;
+}
+
+
+/* About → CTA */
+
+#about {
+  padding-bottom: 80px;
+}
+
+
+/* Contact */
+
+#contact {
+  padding-top: 85px;
+  padding-bottom: 90px;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+
+  #services,
+  #products,
+  #about,
+  #contact,
+  .solutions-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .cta-section {
+    padding-top: 55px;
+    padding-bottom: 65px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+
+  #services,
+  #products,
+  #about,
+  #contact,
+  .solutions-section {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+  .hero + .section {
+    padding-top: 75px;
+  }
+
+  #services .section-heading,
+  #products .section-heading {
+    margin-bottom: 34px;
+  }
+
+  .cta-section {
+    padding-top: 45px;
+    padding-bottom: 55px;
+  }
+
+}

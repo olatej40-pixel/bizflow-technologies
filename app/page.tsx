@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 
@@ -6,7 +7,6 @@ import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 
 import { siteConfig } from "@/lib/site";
-
 
 /* ==========================================
    HOMEPAGE SEO METADATA
@@ -18,6 +18,9 @@ export const metadata: Metadata = {
   },
 };
 
+/* ==========================================
+   SERVICES
+========================================== */
 
 const services = [
   {
@@ -58,6 +61,9 @@ const services = [
   },
 ];
 
+/* ==========================================
+   BUSINESS SOLUTIONS
+========================================== */
 
 const solutions = [
   "Inventory Management",
@@ -70,6 +76,9 @@ const solutions = [
   "Custom Business Portals",
 ];
 
+/* ==========================================
+   PRODUCTS & PROJECTS
+========================================== */
 
 const projects = [
   {
@@ -78,6 +87,10 @@ const projects = [
     description:
       "A commerce platform that allows customers to select products and send completed orders directly through WhatsApp.",
     status: "Live Product",
+    image: "/images/products/whatsorder.png",
+    imageAlt: "WhatsOrder online store and commerce platform",
+    href: "https://whats-order-sable.vercel.app",
+    external: true,
   },
   {
     category: "Booking / SaaS",
@@ -85,6 +98,10 @@ const projects = [
     description:
       "A modern booking platform for service businesses to manage appointments, customers, staff and availability.",
     status: "In Development",
+    image: "/images/products/bookflow.png",
+    imageAlt: "BookFlow booking and appointment management platform",
+    href: "/products",
+    external: false,
   },
   {
     category: "Business Operations",
@@ -92,30 +109,32 @@ const projects = [
     description:
       "Tailored inventory, workflow, reporting and operational systems designed around real business requirements.",
     status: "Custom Solution",
+    image: "/images/products/custom-system.png",
+    imageAlt: "Custom business management software dashboard",
+    href: "/contact",
+    external: false,
   },
 ];
 
+/* ==========================================
+   HOMEPAGE
+========================================== */
 
 export default function Home() {
   return (
     <main>
       <SiteHeader />
 
-
       {/* ==========================================
           HERO
       ========================================== */}
 
-      <section
-        id="home"
-        className="hero"
-      >
+      <section id="home" className="hero">
         <div className="hero-glow hero-glow-one"></div>
         <div className="hero-glow hero-glow-two"></div>
 
         <div className="container hero-grid">
           <div className="hero-content">
-
             <div className="eyebrow">
               <span></span>
               Software • Web • Digital Solutions
@@ -123,23 +142,17 @@ export default function Home() {
 
             <h1>
               We build digital products that
-              <span>
-                {" "}
-                solve real business problems.
-              </span>
+              <span> solve real business problems.</span>
             </h1>
 
             <p className="hero-description">
-              We design and develop professional
-              websites, custom software, web
-              applications and SaaS products that
-              help businesses automate operations,
-              improve efficiency and create new
-              revenue opportunities.
+              We design and develop professional websites, custom software,
+              web applications and SaaS products that help businesses
+              automate operations, improve efficiency and create new revenue
+              opportunities.
             </p>
 
             <div className="hero-actions">
-
               <Link
                 href="/contact"
                 className="btn btn-primary"
@@ -154,11 +167,9 @@ export default function Home() {
               >
                 Explore Our Products
               </Link>
-
             </div>
 
             <div className="hero-trust">
-
               <div>
                 <strong>Web</strong>
                 <span>Development</span>
@@ -173,20 +184,14 @@ export default function Home() {
                 <strong>SaaS</strong>
                 <span>Products</span>
               </div>
-
             </div>
-
           </div>
-
 
           {/* HERO VISUAL */}
 
           <div className="hero-visual">
-
             <div className="dashboard-card">
-
               <div className="dashboard-top">
-
                 <div className="dashboard-dots">
                   <span></span>
                   <span></span>
@@ -197,12 +202,9 @@ export default function Home() {
                   <i></i>
                   Live System
                 </span>
-
               </div>
 
-
               <div className="dashboard-body">
-
                 <aside className="mock-sidebar">
                   <div className="mock-logo"></div>
                   <div className="mock-nav active"></div>
@@ -211,11 +213,8 @@ export default function Home() {
                   <div className="mock-nav small"></div>
                 </aside>
 
-
                 <div className="mock-content">
-
                   <div className="mock-heading">
-
                     <div>
                       <span></span>
                       <span></span>
@@ -225,12 +224,9 @@ export default function Home() {
                       type="button"
                       aria-label="Dashboard action"
                     ></button>
-
                   </div>
 
-
                   <div className="mock-stats">
-
                     <div>
                       <small>Websites</small>
                       <strong>Build</strong>
@@ -248,22 +244,12 @@ export default function Home() {
                       <strong>SaaS</strong>
                       <span>Modern</span>
                     </div>
-
                   </div>
 
-
                   <div className="mock-chart">
-
                     <div className="chart-label">
-
-                      <span>
-                        Digital growth
-                      </span>
-
-                      <strong>
-                        Active
-                      </strong>
-
+                      <span>Digital growth</span>
+                      <strong>Active</strong>
                     </div>
 
                     <div className="bars">
@@ -276,131 +262,79 @@ export default function Home() {
                       <i style={{ height: "65%" }}></i>
                       <i style={{ height: "88%" }}></i>
                     </div>
-
                   </div>
-
                 </div>
-
               </div>
-
             </div>
 
-
             <div className="floating-card floating-card-one">
-
               <span>✓</span>
 
               <div>
-
-                <strong>
-                  Custom Solutions
-                </strong>
-
-                <small>
-                  Built for your business
-                </small>
-
+                <strong>Custom Solutions</strong>
+                <small>Built for your business</small>
               </div>
-
             </div>
 
-
             <div className="floating-card floating-card-two">
-
               <span>↗</span>
 
               <div>
-
-                <strong>
-                  Scalable
-                </strong>
-
-                <small>
-                  Ready to grow
-                </small>
-
+                <strong>Scalable</strong>
+                <small>Ready to grow</small>
               </div>
-
             </div>
-
           </div>
-
         </div>
       </section>
-
-
 
       {/* ==========================================
           SERVICES
       ========================================== */}
 
-      <section
-        id="services"
-        className="section"
-      >
+      <section id="services" className="section">
         <div className="container">
-
           <div className="section-heading">
-
             <div>
-
               <span className="section-label">
                 What We Do
               </span>
 
               <h2>
-                Technology services built around
-                your goals.
+                Technology services built around your goals.
               </h2>
-
             </div>
 
             <p>
-              From your first idea to deployment
-              and ongoing support, we create
-              practical digital solutions that
-              help businesses work smarter.
+              From your first idea to deployment and ongoing support,
+              we create practical digital solutions that help businesses
+              work smarter.
             </p>
-
           </div>
 
-
           <div className="services-grid">
-
             {services.map((service) => (
-
               <article
                 className="service-card"
                 key={service.number}
               >
-
                 <span className="service-number">
                   {service.number}
                 </span>
 
-                <h3>
-                  {service.title}
-                </h3>
+                <h3>{service.title}</h3>
 
-                <p>
-                  {service.description}
-                </p>
+                <p>{service.description}</p>
 
                 <Link href="/services">
                   Learn more
                   <span>→</span>
                 </Link>
-
               </article>
-
             ))}
-
           </div>
-
         </div>
       </section>
-
-
 
       {/* ==========================================
           SOLUTIONS
@@ -411,27 +345,20 @@ export default function Home() {
         className="solutions-section"
       >
         <div className="container solutions-grid">
-
           <div className="solutions-content">
-
             <span className="section-label light-label">
               Business Solutions
             </span>
 
             <h2>
               Turn business challenges into
-              <span>
-                {" "}
-                efficient digital systems.
-              </span>
+              <span> efficient digital systems.</span>
             </h2>
 
             <p>
-              Every organization works differently.
-              Instead of forcing your operations
-              into generic software, we build
-              technology around how your business
-              actually works.
+              Every organization works differently. Instead of forcing
+              your operations into generic software, we build technology
+              around how your business actually works.
             </p>
 
             <Link
@@ -441,44 +368,26 @@ export default function Home() {
               Discuss Your Challenge
               <span>→</span>
             </Link>
-
           </div>
-
 
           <div className="solutions-list">
+            {solutions.map((solution, index) => (
+              <div
+                className="solution-item"
+                key={solution}
+              >
+                <span>
+                  {String(index + 1).padStart(2, "0")}
+                </span>
 
-            {solutions.map(
-              (solution, index) => (
+                <strong>{solution}</strong>
 
-                <div
-                  className="solution-item"
-                  key={solution}
-                >
-
-                  <span>
-                    {String(index + 1).padStart(
-                      2,
-                      "0"
-                    )}
-                  </span>
-
-                  <strong>
-                    {solution}
-                  </strong>
-
-                  <i>↗</i>
-
-                </div>
-
-              )
-            )}
-
+                <i>↗</i>
+              </div>
+            ))}
           </div>
-
         </div>
       </section>
-
-
 
       {/* ==========================================
           PRODUCTS
@@ -489,110 +398,101 @@ export default function Home() {
         className="section products-section"
       >
         <div className="container">
-
           <div className="section-heading">
-
             <div>
-
               <span className="section-label">
                 Products & Projects
               </span>
 
               <h2>
-                Solutions we build, launch and
-                grow.
+                Solutions we build, launch and grow.
               </h2>
-
             </div>
 
             <p>
-              Our products demonstrate how
-              technology can simplify everyday
-              business operations and create
-              scalable digital opportunities.
+              Our products demonstrate how technology can simplify
+              everyday business operations and create scalable digital
+              opportunities.
             </p>
-
           </div>
-
 
           <div className="projects-grid">
-
-            {projects.map(
-              (project, index) => (
-
-                <article
-                  className="project-card"
-                  key={project.title}
+            {projects.map((project, index) => (
+              <article
+                className="project-card"
+                key={project.title}
+              >
+                <div
+                  className={`project-visual visual-${index + 1}`}
                 >
-
-                  <div
-                    className={`project-visual visual-${
-                      index + 1
-                    }`}
-                  >
-
-                    <div className="project-window">
-
-                      <div className="project-window-top">
+                  <div className="project-browser">
+                    <div className="project-browser-bar">
+                      <div className="project-browser-dots">
                         <span></span>
                         <span></span>
                         <span></span>
                       </div>
 
-                      <div className="project-window-body">
-
-                        <div className="project-mini-sidebar"></div>
-
-                        <div className="project-mini-content">
-                          <div></div>
-                          <div></div>
-                          <div></div>
-                        </div>
-
+                      <div className="project-browser-address">
+                        {project.title}
                       </div>
-
                     </div>
 
-
-                    <span className="project-badge">
-                      {project.status}
-                    </span>
-
+                    <div className="project-screenshot">
+                      <Image
+                        src={project.image}
+                        alt={project.imageAlt}
+                        width={1200}
+                        height={750}
+                        sizes="(max-width: 700px) 90vw, (max-width: 1100px) 45vw, 360px"
+                        className="project-screenshot-image"
+                      />
+                    </div>
                   </div>
 
+                  <span className="project-badge">
+                    {project.status}
+                  </span>
+                </div>
 
-                  <div className="project-info">
+                <div className="project-info">
+                  <span>
+                    {project.category}
+                  </span>
 
-                    <span>
-                      {project.category}
-                    </span>
+                  <h3>
+                    {project.title}
+                  </h3>
 
-                    <h3>
-                      {project.title}
-                    </h3>
+                  <p>
+                    {project.description}
+                  </p>
 
-                    <p>
-                      {project.description}
-                    </p>
+                  <Link
+                    href={project.href}
+                    target={
+                      project.external
+                        ? "_blank"
+                        : undefined
+                    }
+                    rel={
+                      project.external
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
+                  >
+                    {project.external
+                      ? "View Live Product"
+                      : "View Solution"}
 
-                    <Link href="/products">
-                      View solution
-                      <span>→</span>
-                    </Link>
-
-                  </div>
-
-                </article>
-
-              )
-            )}
-
+                    <span>→</span>
+                  </Link>
+                </div>
+              </article>
+            ))}
           </div>
-
         </div>
       </section>
-
-
 
       {/* ==========================================
           ABOUT
@@ -603,99 +503,70 @@ export default function Home() {
         className="section about-section"
       >
         <div className="container about-grid">
-
           <div className="about-content">
-
             <span className="section-label">
               Why Work With Us
             </span>
 
             <h2>
               We don&apos;t just build software.
-              <span>
-                {" "}
-                We build solutions.
-              </span>
+              <span> We build solutions.</span>
             </h2>
 
             <p>
-              Technology should solve a problem,
-              simplify a process or create an
-              opportunity. That principle guides
-              every website, application and
-              software product we develop.
+              Technology should solve a problem, simplify a process
+              or create an opportunity. That principle guides every
+              website, application and software product we develop.
             </p>
 
-
             <div className="about-points">
-
               <div>
-
                 <span>✓</span>
 
                 <div>
-
                   <strong>
                     Business-focused development
                   </strong>
 
                   <p>
-                    We begin with your problem and
-                    objectives before selecting the
-                    technology.
+                    We begin with your problem and objectives before
+                    selecting the technology.
                   </p>
-
                 </div>
-
               </div>
 
-
               <div>
-
                 <span>✓</span>
 
                 <div>
-
                   <strong>
                     Built for growth
                   </strong>
 
                   <p>
-                    Solutions are structured to
-                    evolve as your requirements and
-                    customer base grow.
+                    Solutions are structured to evolve as your
+                    requirements and customer base grow.
                   </p>
-
                 </div>
-
               </div>
 
-
               <div>
-
                 <span>✓</span>
 
                 <div>
-
                   <strong>
                     Long-term support
                   </strong>
 
                   <p>
-                    We can continue improving and
-                    maintaining your solution after
-                    launch.
+                    We can continue improving and maintaining your
+                    solution after launch.
                   </p>
-
                 </div>
-
               </div>
-
             </div>
 
-
             <div className="hero-actions">
-
               <Link
                 href="/about"
                 className="btn btn-secondary"
@@ -703,18 +574,13 @@ export default function Home() {
                 Learn More About BizFlow
                 <span>→</span>
               </Link>
-
             </div>
-
           </div>
 
-
           <div className="about-panel">
-
             <span className="about-panel-label">
               Our Approach
             </span>
-
 
             {[
               [
@@ -738,51 +604,30 @@ export default function Home() {
                 "We deploy and support future improvements.",
               ],
             ].map(([number, title, text]) => (
-
               <div
                 className="process-step"
                 key={number}
               >
-
-                <span>
-                  {number}
-                </span>
+                <span>{number}</span>
 
                 <div>
-
-                  <strong>
-                    {title}
-                  </strong>
-
-                  <p>
-                    {text}
-                  </p>
-
+                  <strong>{title}</strong>
+                  <p>{text}</p>
                 </div>
-
               </div>
-
             ))}
-
           </div>
-
         </div>
       </section>
-
-
 
       {/* ==========================================
           CTA
       ========================================== */}
 
       <section className="cta-section">
-
         <div className="container">
-
           <div className="cta-card">
-
             <div>
-
               <span className="section-label light-label">
                 Have an idea?
               </span>
@@ -793,12 +638,10 @@ export default function Home() {
               </h2>
 
               <p>
-                Tell us what you want to build or
-                the problem you need to solve.
+                Tell us what you want to build or the problem
+                you need to solve.
               </p>
-
             </div>
-
 
             <Link
               href="/contact"
@@ -807,14 +650,9 @@ export default function Home() {
               Start a Conversation
               <span>→</span>
             </Link>
-
           </div>
-
         </div>
-
       </section>
-
-
 
       {/* ==========================================
           QUICK CONTACT
@@ -825,9 +663,7 @@ export default function Home() {
         className="section contact-section"
       >
         <div className="container contact-grid">
-
           <div className="contact-content">
-
             <span className="section-label">
               Contact Us
             </span>
@@ -837,71 +673,41 @@ export default function Home() {
             </h2>
 
             <p>
-              Whether you need a website, custom
-              software, business automation or a
-              new SaaS product, send us your idea
-              and let&apos;s discuss the solution.
+              Whether you need a website, custom software,
+              business automation or a new SaaS product,
+              send us your idea and let&apos;s discuss the solution.
             </p>
 
-
             <div className="contact-options">
-
-              <a
-                href={`mailto:${siteConfig.email}`}
-              >
-
+              <a href={`mailto:${siteConfig.email}`}>
                 <span>@</span>
 
                 <div>
-
-                  <small>
-                    Email us
-                  </small>
-
-                  <strong>
-                    {siteConfig.email}
-                  </strong>
-
+                  <small>Email us</small>
+                  <strong>{siteConfig.email}</strong>
                 </div>
-
               </a>
-
 
               <a
                 href={siteConfig.whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-
                 <span>W</span>
 
                 <div>
-
-                  <small>
-                    WhatsApp
-                  </small>
-
-                  <strong>
-                    Chat with us
-                  </strong>
-
+                  <small>WhatsApp</small>
+                  <strong>Chat with us</strong>
                 </div>
-
               </a>
-
             </div>
-
           </div>
 
-
           <ProjectInquiryForm />
-
         </div>
       </section>
 
-
       <SiteFooter />
-
     </main>
   );
 }
